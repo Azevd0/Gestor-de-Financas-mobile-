@@ -10,9 +10,9 @@
 			<!-- Propriedades JDBC -->
 			<property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="jakarta.persistence.jdbc.url"
-				value="jdbc:postgresql://localhost:5432/gestor_financas" />
-			<property name="jakarta.persistence.jdbc.user" value="davyson" />
-			<property name="jakarta.persistence.jdbc.password" value="private2026" />
+				value="jdbc:postgresql://localhost:5432/" />
+			<property name="jakarta.persistence.jdbc.user" value="" />
+			<property name="jakarta.persistence.jdbc.password" value="" />
 			<!-- Configurações específicas do Hibernate -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
