@@ -202,20 +202,23 @@ public class Menu {
 }
 
 	private void listarPorCategoria() {
-		System.out.print("Deseja filtrar (R)eceita ou (D)espesa? ");
-		String opcao = sc.nextLine().toUpperCase();
+    System.out.print("Deseja filtrar (R)eceita ou (D)espesa? ");
+    String opcao = sc.nextLine().toUpperCase();
 
-		System.out.print("Digite o nome da categoria (ex: viagem, lazer, mercado): ");
-		String categoria = sc.nextLine();
+    if (!opcao.equals("R") && !opcao.equals("D")) {
+        System.out.println("\n[!] Opção inválida! Use apenas 'R' ou 'D'.");
+        return;
+    }
 
-		if (opcao.equals("D")) {
-			service.listarDespesasPorTipo(categoria);
-		} else if (opcao.equals("R")) {
-			service.listarReceitasPorTipo(categoria);
-		} else {
-			System.out.println("Opção inválida!");
-		}
-	}
+    System.out.print("Digite o nome da categoria (ex: viagem, lazer, mercado): ");
+    String categoria = sc.nextLine();
+
+    if (opcao.equals("D")) {
+        service.listarDespesasPorTipo(categoria);
+    } else {
+        service.listarReceitasPorTipo(categoria);
+    }
+}
 
 	private void relatorioDespesas() {
 		int m = lerInteiro("Digite o mes para o relatorio (1-12): ");
