@@ -137,3 +137,8 @@ Gestor-de-Financas/JAVA/
 ```bash
 java -jar app.jar
 ```
+
+### Caso o servidor caia execute o comando:
+ ```bash
+pg_ctl -D $PREFIX/var/lib/postgresql start
+```
