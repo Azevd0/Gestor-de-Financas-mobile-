@@ -142,3 +142,4 @@ java -jar app.jar
  ```bash
 pg_ctl -D $PREFIX/var/lib/postgresql start
 ```
+e execute a aplicação 
